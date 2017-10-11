@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Grid from "./Grid";
 
 class App extends React.Component {
     render() {
-        return(
-            <div>kokal</div>
-        )
+        const props = {
+            rows: 2,
+            cells: 4
+        };
+
+        return <Grid {...props}/>;
     }
 }
 

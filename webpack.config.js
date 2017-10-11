@@ -12,7 +12,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['lib']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Output Management',
+            template: 'src/index.ejs',
         })
     ],
     devServer: {

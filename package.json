@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC"

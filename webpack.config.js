@@ -8,12 +8,16 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'lib')
     },
+    devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin(['lib']),
         new HtmlWebpackPlugin({
             title: 'Output Management'
         })
     ],
+    devServer: {
+        contentBase: './lib'
+    },
     module: {
         rules: [
             {

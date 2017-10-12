@@ -1,0 +1,31 @@
+.grid-container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/*-- our cleafix hack -- */
+.row:before,
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 300px;
+    height: 300px;
+    /*-- our gutter -- */
+    padding: 9px;
+    border: 1px solid #000000;
+    margin: 15px;
+}
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}

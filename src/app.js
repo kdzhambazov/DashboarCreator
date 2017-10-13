@@ -1,15 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Grid from "./Grid";
+import DashbordCreator from "./DashbordCreator";
 
 class App extends React.Component {
-    render() {
-        const props = {
-            rows: 2,
-            cells: 4
-        };
-
-        return <Grid {...props}/>;
+    render() {      
+		return <DashbordCreator />;
     }
 }
 

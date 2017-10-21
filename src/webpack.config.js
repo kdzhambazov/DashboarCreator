@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(["lib"]),
         new HtmlWebpackPlugin({
-            title: "Output Management",
+            title: "React Basic",
             template: "src/index.ejs"
         })
     ],

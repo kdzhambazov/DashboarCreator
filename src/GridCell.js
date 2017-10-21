@@ -1,6 +1,9 @@
 import React from "react";
 import Grid from "./Grid";
 import DropZone from "./DropZone";
+import { components } from "./Components";
+
+console.log(components);
 
 export default class GridCell extends React.Component {
     render() {

@@ -1,23 +1,18 @@
 import React from "react";
-import Grid from "./Grid";
-import DropZone from "./DropZone";
-import { components } from "./Components";
-
-console.log(components);
+import createByType from "./utils/componentFactory";
 
 export default class GridCell extends React.Component {
     render() {
-	 	let compMap = {
-			grid: Grid,
-			dropzone: DropZone
-		};
-		
+        let cellContent = createByType(this.props.content.type, {children: this.props.content.children});
+        console.log("Rendering cell content: ", cellContent);
+
         return (
             <div className="col-1">
-            	{ React.createElement(compMap[this.props.content.type], {children: this.props.content.children}) }
+                { cellContent }
             </div>
         );
     }
 }
 
-GridCell.displayName = "GridCell";
+// 0888009577 - Данчо, декинг мостри
+// 0894365789 - Станка

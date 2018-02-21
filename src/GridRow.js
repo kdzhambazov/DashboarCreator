@@ -29,5 +29,3 @@ export default class GridRow extends React.Component {
         );
     }
 }
-
-GridRow.displayName = "GridRow";

@@ -30,5 +30,3 @@ export default class Grid extends React.Component {
         );
     }
 }
-
-Grid.displayName = "Grid";

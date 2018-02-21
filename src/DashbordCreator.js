@@ -9,5 +9,3 @@ export default class DashbordCreator extends React.Component {
         );
     }
 }
-
-DashbordCreator.displayName = "DashbordCreator";

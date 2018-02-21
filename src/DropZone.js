@@ -1,5 +1,4 @@
 import React from "react";
-import { Store } from "./Store";
 
 export default class DropZone extends React.Component {
     render() {
@@ -8,5 +7,3 @@ export default class DropZone extends React.Component {
         );
     }
 }
-
-DropZone.displayName = "DropZone";

@@ -13,6 +13,3 @@ export default class GridCell extends React.Component {
         );
     }
 }
-
-// 0888009577 - Данчо, декинг мостри
-// 0894365789 - Станка

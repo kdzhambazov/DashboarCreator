@@ -1,12 +1,14 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const extractLESS = new ExtractTextPlugin("../style/style.css");
+const cleanPlugin = new CleanWebpackPlugin(["lib"]);
 
 module.exports = {
     devtool: "inline-source-map",
     entry: "./src/app.js",
     output: {
-        path: path.resolve(__dirname, "./src"),
+        path: path.resolve(__dirname, "./dist/javascript"),
         filename: "bundle.js"
     },
     module: {
@@ -25,6 +27,7 @@ module.exports = {
         ]
     },
     plugins: [
-        extractLESS
+        extractLESS,
+        cleanPlugin
     ]
 };

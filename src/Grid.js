@@ -2,7 +2,6 @@ import React from "react";
 import GridRow from "./GridRow";
 import GridCell from "./GridCell";
 import generateUid from "./utils/uniqueIdGenerator";
-import "./style/style.less";
 
 export default class Grid extends React.Component {
     buildRows() {

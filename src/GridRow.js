@@ -1,5 +1,4 @@
 import React from "react";
-import GridCell from "./GridCell";
 
 export default class GridRow extends React.Component {
     render() {

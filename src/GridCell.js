@@ -3,7 +3,7 @@ import createByType from "./utils/componentFactory";
 
 export default class GridCell extends React.Component {
     render() {
-        let cellContent = createByType(this.props.content.type, {children: this.props.content.children});
+        let cellContent = createByType(this.props.type, {children: this.props.children});
         console.log("Rendering cell content: ", cellContent);
 
         return (
@@ -13,6 +13,3 @@ export default class GridCell extends React.Component {
         );
     }
 }
-
-// 0888009577 - Данчо, декинг мостри
-// 0894365789 - Станка

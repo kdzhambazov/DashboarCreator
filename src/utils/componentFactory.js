@@ -6,3 +6,5 @@ export default function createByType(type, props) {
 
     return React.createElement(componentToCreate.default, props);
 }
+
+// 0884 999 985 - Todor

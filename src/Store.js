@@ -2,66 +2,70 @@ let Store = {
         "type": "grid",
         "children": [
             {
+                "bindTo": "someID",
+                "type": "dropzone",
+                "content": {},
+                "colProps": {
+                    "colspan": 3
+                }
+            },
+            {
+                "type": "grid",
                 "children": [
                     {
                         "bindTo": "someID",
                         "type": "dropzone",
-                        "content": {}
-                    }
-                ]
-            },
-            {
-                "children": [
-                    {
-                        "type": "grid",
-                        "children": [
-                            {
-                                "children": [
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    },
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    },
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    }
-                                ]
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    },
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    },
-                                    {
-                                        "bindTo": "someID",
-                                        "type": "dropzone",
-                                        "content": {}
-                                    }
-                                ]
-                            }
-                        ]
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
                     },
                     {
-                        "type": "grid",
-                        "children": []
+                        "bindTo": "someID",
+                        "type": "dropzone",
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
+                    },
+                    {
+                        "bindTo": "someID",
+                        "type": "dropzone",
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
+                    },
+                    {
+                        "bindTo": "someID",
+                        "type": "dropzone",
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
+                    },
+                    {
+                        "bindTo": "someID",
+                        "type": "dropzone",
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
+                    },
+                    {
+                        "bindTo": "someID",
+                        "type": "dropzone",
+                        "content": {},
+                        "colProps": {
+                            "colspan": 3
+                        }
                     }
-                ]
+                ],
+                "colProps": {
+                    "colspan": 12
+                }
             }
         ]
-    }
+    };
 
 export { Store };

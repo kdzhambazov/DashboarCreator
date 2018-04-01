@@ -1,30 +1,45 @@
 import React from "react";
 import GridRow from "./GridRow";
-import "./style/style.css";
+import GridCell from "./GridCell";
+import generateUid from "./utils/uniqueIdGenerator";
+import "./style/style.less";
 
 export default class Grid extends React.Component {
     buildRows() {
+        let cells = [];
+        let rowSpans = 0;
         let result = [];
-        let props = this.props;
+        let children = this.props.children;
 
-        for (let i = 0; i < props.children.length; i++) {
-            let rowProps = {
-                key: i,
-                children: props.children[i].children
-            };
+        children.forEach(function(element, index){
+            let colSpan = element.colProps.colspan || 12;
+            let colSpanNext = children[index + 1] ? children[index + 1].colProps.colspan : null;
 
-            result.push(
-                <GridRow {...rowProps} />
-            )
-        };        
+            if (colSpan <= 12 - rowSpans) {
+                cells.push(
+                    <GridCell key={generateUid()} type={element.type}>
+                        {element.children || []}
+                    </GridCell>
+                );
+                rowSpans += colSpan;
+            }
 
+            if (!colSpanNext || colSpanNext > 12 - rowSpans) {
+                result.push(
+                    <GridRow key={generateUid()}>
+                        {cells}
+                    </GridRow>);
+                cells = [];
+                rowSpans = 0;
+            }
+        });
         return result;
     }
 
     render() {
         let rows = this.buildRows();
         return (
-            <div className="grid-container outline">
+            <div className="grid">
                 {rows}
             </div>
         );

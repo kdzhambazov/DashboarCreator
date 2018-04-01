@@ -1,23 +1,13 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractLESS = new ExtractTextPlugin("../style/style.css");
 
 module.exports = {
+    devtool: "inline-source-map",
     entry: "./src/app.js",
     output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "lib")
-    },
-    devtool: "inline-source-map",
-    plugins: [
-        new CleanWebpackPlugin(["lib"]),
-        new HtmlWebpackPlugin({
-            title: "Output Management",
-            template: "src/index.ejs"
-        })
-    ],
-    devServer: {
-        contentBase: "./lib"
+        path: path.resolve(__dirname, "./src"),
+        filename: "bundle.js"
     },
     module: {
         rules: [
@@ -27,9 +17,14 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                test: /\.less$/i,
+                use: extractLESS.extract({
+                    use: ["css-loader", "less-loader"]
+                })
             }
         ]
-    }
+    },
+    plugins: [
+        extractLESS
+    ]
 };
